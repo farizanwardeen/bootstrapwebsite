@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title></title>
+		<meta name="description" content="">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+		
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+		
+	</head>
+	<body>
+	
+	    <!--container bootstrap3 feature-->
+	    <!--container is a wrapper that centers the website in middle of the browser and it cuts of the edges-->
+		<div class="container" id="main">
+			<!--for the navbar, navbar-fixed-top is boostrap 3 class-->
+			<!--this class with give the div the styles of the navbar that are prestyled in the boostrap css-->
+			<!--navbar-fixed-top is going to stick the navbar to the top of the web browser and it will stay there when you scroll down rather than getting lost at the top of the website we dont have to scroll back up to see the navigation menu-->
+			<div class="navbar navbar-fixed-top">
+				<!--aligns the content of the navbar to the center-->
+					<div class="container">
+
+						<!--we add this button to create a small symbol when clicked it shows you the stuff that was cut off when shrinking the browser size like using it in mobile-->
+						<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+
+						</button>
+                          
+                    <!--add the navbar logo-->
+                    <!--bootstrap3 css class-->
+                    <!--href="/" means goes to the root of the website with homepage-->
+                    <!--alt is used to explain what it is -->
+                    	<a class="navbar-brand" href="#"><img src="images/logo.png" alt="Your Logo"></a> 
+                    	<!--adding the content of the navbar all the nav items, drop items and so on -->
+                    	<!--nav-collapse is a bootstrap3 css class which allows our nav bar to be responsive so when you shrink it to mobile size the navbar is collapsed-->
+                    	<div class="nav-collapse collapse navbar-responsive-collapse">
+                    		<!--we add an unordered list-->
+                    		<ul class="nav navbar-nav">
+                             <!--we add our nav items-->
+                             <!-- we have active because we have show nav item with an active class-->
+                             
+                             	<li class="active">
+                             		<a href="#">Home</a>
+                             	</li>
+								
+
+                              <!--we dont want this one to be active-->
+                              <!--add drop down for Services-->
+                             	<li class="dropdown">
+                             		<!--dropdown-toggle is a bootstrap3 attribute on a tag-->
+                             		<!--calls the bootstrap3 class to be a toggle for the drop down-->
+                             		<!--we add a drop down arrow by using strong bootstrap class="caret" -->
+                             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services
+                             			<strong class="caret"></strong></a>
+
+                                    <!--adding the unordered list-->
+                                    <ul class="dropdown-menu">
+                                    	<!--adding the list item-->
+                                    	<li>
+                                            <a href="#">Web Design</a>
+
+                                    	</li>
+
+                                    	<li>
+                                            <a href="#">Web Development</a>
+
+                                    	</li>
+
+                                    	<li>
+                                            <a href="#">SEO</a>
+
+                                    	</li>
+
+                                    	<!--adding a horizontal divider-->
+                                    	<li class="divider"></li>
+
+                                    	<li class="dropdown-header">More Services </li>
+
+                                    	<li>
+                                            <a href="#">Content Creation</a>
+
+                                    	</li>
+
+                                    	<li>
+                                            <a href="#">Social Media Marketing</a>
+
+                                    	</li>
+                                    </ul><!--end drop down menu-->
+
+                             	</li>
+                            </ul><!--end nav-->
+
+                            <!--we are going to create the search input-->
+                            <form class="navbar-form pull-left">
+                            	<!--adding an input within the form of type text form-control is bootstrap3 class -->
+                            	<!--placeholder is what you will see as hint for what you will type in-->
+                                <input type="text" class="form-control" placeholder="Search this site..." id="searchInput">
+                                
+                                <!--we add a button-->
+                                <!--with the button we are going to use bootstrap glyphicon icon's font icon-->
+                                <!--glyphicon is the search logo -->
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            </form><!--end navbar-form--> 
+
+                            <!--pull-right is going to add the css style of float right, it will float the element to the element to the right side of the nav bar-->
+                            <ul class="nav navbar-nav pull-right">
+                            	<!--adding drop down for My Account-->
+                            	<li class="dropdown">
+                            		<!--we also add a glyphicon for user-->
+                            		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account<strong class="caret"></strong></a>
+
+                                    <!--adding an unordered list-->
+                                    <ul class="dropdown-menu">
+                                    	<li>
+                                    		<!--adding font icon with span-->
+                                            <a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a>
+
+                                    	</li>
+                                    	<li>
+                                            <a href="#"><span class="glyphicon glyphicon-refresh"></span>Update Profile</a>
+
+                                    	</li>
+                                    	<li>
+                                            <a href="#"><span class="glyphicon glyphicon-briefcase"></span>Billing</a>
+
+                                    	</li>
+                                    	<li class="divider"></li>
+                                    	<li>
+                                            <a href="#"><span class="glyphicon glyphicon-wrench"></span>Sign out</a>
+
+                                    	</li>
+                                    </ul>
+
+                            	</li>
+                    		</ul><!--end nav pull-right-->
+
+                    	</div><!--end nav-collapse-->
+
+
+					</div><!--end container-->
+			</div> <!--end navbar-->
+
+
+			<!--We are going to code the div for the carousel, also bootstrap classes-->
+			<!--slide will make the carousel items slide for animation-->
+			<div class="carousel slide" id="myCarousel">
+
+                <!--adding the circular Indicators-->
+                <!--carousel-indicators is a bootsrap class that help us put the indicators without doing any CSS-->
+                <ol class="carousel-indicators">
+                    <!--when you click on the first circle it is going to slide the carousel to the first slide -->
+                    <!--we give the carousel indicator a target to look for which is the carousel-->
+                   <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                   <li data-slide-to="1" data-target="#myCarousel"></li>
+                   <li data-slide-to="2" data-target="#myCarousel"></li>
+                </ol>
+
+            <!--Wrapper for the slides-->
+                <!--carousel-inner is a bootstrap3 class-->
+                <div class="carousel-inner">
+                    <!--add active to the first slide will run the javascript pluging that bootstrap supplies-->
+                    <!--helps to navigate the carousel-->
+                    <div class="item active" id="slide1">
+                        <!--text that is going to display behind the carousel background image-->
+                        <div class="carousel-caption">
+                            <h4> Bootstrap 3</h4>
+                            <p>Learn how to build your first responsive website with brand new Twitter Boostrap 3!</p>
+                        </div><!--end carousel-caption-->
+                    </div><!--end item-->
+
+                    
+                    <div class="item" id="slide2">
+                        <!--text that is going to display behind the carousel background image-->
+                        <div class="carousel-caption">
+                            <h4> Learn to code a website in 4-hours!</h4>
+                            <p>PSD to HTML5 &amp; CSS3 is a popular Udemy course that has helped thousands of aspiring web designers launch their web design career.</p>
+                        </div><!--end carousel-caption-->
+                    </div><!--end item-->
+
+
+                    <div class="item" id="slide3">
+                        <!--text that is going to display behind the carousel background image-->
+                        <div class="carousel-caption">
+                            <h4> Web Hosting 101</h4>
+                            <p>Learn how to buy a perfect domain name and hosting package, and get your website live on the web with ease.</p>
+                        </div><!--end carousel-caption-->
+                    </div><!--end item-->
+                  </div> <!--end carousel-inner-->
+
+                 <!--Adding the left and right arrows for sliding the carousel-->
+                 <!--Controls-->
+                 <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+                 <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+
+			</div><!--end myCarousel-->
+
+
+            <!--We add a rows-->
+            <!--uses a bootstrap class called well-->
+            <div class="row" id="bigCallout">
+                <!--we add a 12 column section spans the full width of the website -->
+                <div class="col-12">
+                    <!--we add an alert that pops up when the button is clicked-->
+                    <!--fade in extra helper class allow you to get the effect of alert fading in-->
+                    <div class="alert alert-success alert-block fade in" id="successAlert">
+                        <!--this will dismiss or close the alert box...&times give a little X -->
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h4>Success!</h4>
+                        <p>You just made this element display by using JQuery. Click the "x" in top right corner to close this bad boy.</p>
+                    </div><!--end alert-->
+                     <!--Visible only on small devices-->
+                     <!-- when you resize and get to mobile size a new button called give us a call pops up-->
+                     <!--we add a small well bootstrap class...visible small says show this on only small devices-->
+                     <div class="well well-small visible-sm">
+                        <!--btn-block means span the full width of the parent element...btn-default is default color for the button which is dark grey-->
+                        <!--we also add a glyphicon for the phone symbol-->
+                        <a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-phone"></span> Give us a call! </a>
+                     </div><!--end well small-->
+
+                    <!--we add the boostrap class well-->
+                    <div class="well">
+                        <!--page header is a boostrap3 css class-->
+                        <div class="page-header">
+                            <!-- we use small for subheader-->
+                            <h1>A Fancy Header <small>A subheader for extra awesome.</small></h1>
+                        </div><!--end page-header-->
+                        <!--lead means leading text it is boostrap 3 class which makes the text font larger so it stand out-->
+                        <p class="lead">Some solid leading copy will help get your users engaged. Use this area to come up with something real nice. Know what I'm sayin?</p>
+                        
+                        <!--adding buttons... add links to href-->
+                        <!--we add a large button and give it color(primary)-->
+                        <a href="" class="btn btn-large btn-primary" id="alertMe">Click a nice big button</a>
+                         <!--we add a button link -->
+                         <a href="" class="btn btn-large btn-link">or a secondary link</a>
+                    </div><!--end well-->
+                </div><!--end col-12-->
+            </div><!--end bigCallout-->
+
+            <!--creating the More Features Layout-->
+            <div class="row" id="featuresHeading">
+                <!--col-12 for spaning the full width of the browser-->
+                <div class="col-12">
+                    <h2>More Features</h2>
+                    <!--We put hipster epsum in the code bunch of jargon words-->
+                    <p class="lead">Authentic Etsy deep v you probably haven't heard of them, YOLO sartorial PBR&B iPhone forage. </p>
+                </div><!--end col-12-->
+            </div><!--end featuresHeading-->
+
+
+            <div class="row" id="features">
+                <!--bootstrap3 class that allows us to have a column -->
+                <!--the 3 boxes are 4 columns wide each .. if you need 3 sections 12/4=3 (12 is the full width)-->
+                <!--maintains layout even when it is small that is why col-sm-->
+                <div class="col-sm-4 feature">
+                    <!--panel is a boostrap3 class-->
+                    <div class="panel">
+                        <!--Having heading at the top, the top bar with the grey background-->
+                        <div class="panel-heading">
+                            <!--part of the panel component-->
+                            <h3 class="panel-title">Markup with HTML5</h3>
+                         </div><!--end panel-heading-->
+                         <!--adding image and a badge called HTML5-->
+                         <!--class-"img-circle" converts a squre image into a circle-->
+                         <img src="images/badge_html5.jpg" alt="HTML5" class="img-circle">
+                         <!--adding the text for the panel-->
+                         <p>Butcher hoodie banjo twee, kogi PBR authentic church-key mumblecore irony. </p>
+                         <!--we add a button-->
+                         <!--target="_blank" opens in a new window-->
+                         <!--btn btn-warning btn-block is css bootstrap class give an orange button-->
+                         <a href="http://getbootstrap.com" target="_blank" 
+                         class="btn btn-warning btn-block"> Learn to code HTML5</a>
+                    </div><!--end panel-->
+                </div><!--end col-sm-4 feature-->
+
+                <div class="col-sm-4 feature">
+                    <!--panel is a boostrap3 class-->
+                    <div class="panel">
+                        <!--Having heading at the top, the top bar with the grey background-->
+                        <div class="panel-heading">
+                            <!--part of the panel component-->
+                            <h3 class="panel-title">Style with CSS3</h3>
+                         </div><!--end panel-heading-->
+                         <!--adding image and a badge called HTML5-->
+                         <img src="images/badge_css3.jpg" alt="CSS3" class="img-circle">
+                         <!--adding the text for the panel-->
+                         <p>Butcher hoodie banjo twee, kogi PBR authentic church-key mumblecore irony. </p>
+                         <!--we add a button-->
+                         <!--target="_blank" opens in a new window-->
+                         <!--btn btn-danger gives a red button-->
+                         <a href="http://getbootstrap.com" target="_blank" 
+                         class="btn btn-danger btn-block"> Style it up with CSS3 </a>
+                    </div><!--end panel-->
+                </div><!--end col-sm-4 feature-->
+
+                <div class="col-sm-4 feature">
+                    <!--panel is a boostrap3 class-->
+                    <div class="panel">
+                        <!--Having heading at the top, the top bar with the grey background-->
+                        <div class="panel-heading">
+                            <!--part of the panel component-->
+                            <h3 class="panel-title">Framework by Bootstrap 3</h3>
+                         </div><!--end panel-heading-->
+                         <!--adding image and a badge called HTML5-->
+                         <img src="images/badge_bootstrap.jpg" alt="Bootstrap 3" class="img-circle" >
+                         <!--adding the text for the panel-->
+                         <p>Butcher hoodie banjo twee, kogi PBR authentic church-key mumblecore irony. </p>
+                         <!--we add a button-->
+                         <!--target="_blank" opens in a new window-->
+                         <!--btn-info gives a lite blue button-->
+                         <a href="http://getbootstrap.com" target="_blank" 
+                         class="btn btn-info btn-block"> More Bootstrap</a>
+                    </div><!--end panel-->
+                </div><!--end col-sm-4 feature-->
+
+            </div><!--end features-->
+
+            <!--Coding the Tab Markup.. for coding tabs-->
+            <div class="row" id="moreInfo">
+             <!--adding 6 column frame-->
+                <div class="col-sm-6">
+                    <h3>Neat Tabbable Content</h3>
+                    <div class="tabbable">
+                        <!--we add our tabbable content, we add the nav tabs-->
+                        <ul class="nav nav-tabs">
+                            <!--There is going to be a tab with an id of tab1-->
+                            <!--data-toggle ... toggles the tab-->
+                             <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+                             <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+                        </ul>
+                        <!--Content the tabs will toggle-->
+                        <div class="tab-content">
+                            <!--active tab just like the first one-->
+                            <!--ahref #tab1 is selecting the tab1 here-->
+                            <div class="tab-pane active" id="tab1">
+                                <!--small for subheader-->
+                                <h4><span class="glyphicon glyphicon-map-marker"></span>Our Location<small> More like our favourite surf spot</small></h4>
+
+                                <!--we are going to add a google map embedded in the tab content-->
+
+                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42359.70301954529!2d-89.24979194999999!3d48.42809905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1414201296932" width="100%" height="200" frameborder="0" style="border:0"></iframe>
+
+
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            </div><!--end tab pane-->
+
+                            <!--adding the second tab pane, tab2 link will target this content-->
+                            <div class="tab-pane" id="tab2">
+                                <h4>A Left Floated Picture<small> Using Placehold.it</small></h4>
+                                <!--we add a dummy image a placehold.it image it is a temporary image -->
+                                <!--we link to placehold.it website for the temporary image-->
+                                <!--"thumbnail" is a boostrap class which will make the image look like a thumbnail-->
+                                <!--pull-left will pull the image left-->
+                                <img src="http://placehold.it/140" class="thumbnail pull-left">
+
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                 <!--we add a horizontal row-->
+                                <hr>
+                                <!--we add a button when clicked is going to trigger a modal window-->
+                                    <a href="#myModal" role="button" class="btn btn-warning" data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span> Click for a Modal Window! </a>
+                                
+
+                                <!--coding the modal window container-->
+                                <!--fade allow the modal window the fade in-->
+                                <!--also called modal wrapper-->
+                                <div class="modal fade" id="myModal">
+                                    <!--modal dialog-->
+                                    <div class="modal-dialog">
+                                        <!--modal content-->
+                                        <div class="modal-content">
+                                            <!--modal-header-->
+                                            <div class="modal-header">
+                                                <!--adding a button in the header-->
+                                                <!--close button is going to close the modal window &times close the modal -->
+                                                <button class="close" data-dismiss="modal">&times;</button>
+
+                                                <h4 class="modal-title">A Modal Window</h4>
+
+                                            </div><!--end modal-header -->
+
+                                             <!--modal body-->
+                                            <div class="modal-body">
+
+                                                <h4>Text in a modal</h4>
+
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                                
+                                                <!--adding a pop over-->
+                                                <h4>Popovers in a modal</h4>
+                                                <!--we make a pop over-->
+                                                <!--data-placement="top" means place the popover on the top-->
+                                                <!--we use jquery to create the pop over see js file-->
+                                                <a href="#" class="btn btn-danger pop" data-toggle="popover" data-placement="top" data-original-title="You clicked it!" data-content="I knew you would"> Dont Click this button</a>
+
+                                                <h4>Tooltips in a modal</h4>
+                                                <!--we add the functionality for the tool tips using jquery-->
+                                                <!-- rel selects all links with the tool tip-->
+                                                <a href="" data-original-title="Tooltip" rel="tooltip">This link </a>should have a tooltip, and so should <a href="#" data-original-title="Woohoo!" rel="tooltip">this one!</a>!
+
+                                                <hr>
+                                                <!--"text-muted" mutes the text by making it a little lighter so it is not prominent-->
+                                                <p><small class="text-muted"> P.S. This form doesn't do anything. Just a heads up.</small> </p>
+                                              
+                                                <!--adding the form -->
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <!--uses bootstrap grid system and uses 2 columns for the label-->
+                                                        <label class="col-lg-2 control-label" for="inputName">Name</label>
+
+                                                        <div class="col-lg-10">
+                                                            <input class="form-control" id="inputName" placeholder="Name" type="text">
+                                                        </div>
+                                                    </div>
+
+                                                     <div class="form-group">
+                                                        <!--uses bootstrap grid system and uses 2 columns for the label-->
+                                                        <label class="col-lg-2 control-label" for="inputEmail">Email </label>
+
+                                                        <div class="col-lg-10">
+                                                            <input class="form-control" id="inputEmail" placeholder="Email" type="email">
+                                                        </div>
+                                                    </div>
+
+                                                     <div class="form-group">
+                                                        <!--uses bootstrap grid system and uses 2 columns for the label-->
+                                                        <label class="col-lg-2 control-label" for="inputMessage">Message </label>
+
+                                                        <div class="col-lg-10">
+                                                            <!--we add a text area-->
+                                                            <!--row to choose right width-->
+                                                            <textarea class="form-control" id="inputMessage" placeholder="Message" rows=3></textarea>
+                                                            <button class="btn btn-success pull-right" type="submit">Send!  </button>
+                                                           
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                            </div><!--end modal-body -->
+
+                                                <!--adding a modal footer-->
+                                                <div class="modal-footer">
+                                                    <!--the close button-->
+                                                    <button class="btn btn-default" data-dismiss="modal" type="button">Close</button> 
+                                                    <button class="btn btn-primary" type="button">Save Changes</button>
+                                                </div><!--end modal-footer -->
+                                            
+                                        </div><!--end modal-content-->
+
+                                    </div><!--end modal dialog-->
+
+                                </div><!--end myModal-->
+                            </div><!--end tab-pane-->
+                        </div><!--end tab-content-->
+                    </div><!--end tabbable-->
+                </div><!--end col-sm-6 -->
+                <!--coding the typography section-->
+                <div class="col-sm-6">
+                    <h3>Some Text Info </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                    <h4>A List Group</h4>
+                    <!--adding the custom content list group-->
+                    <div class="list-group">
+                        <!--initiating a list group item-->
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Kale</h4>
+                            <p class="list-group-item-text">The name borecole most likely originates from the Dutch boerenkool (farmer's cabbage), whereas kale bears semblance to the Danish and Swedish kål and to the German Kohl.</p>
+                        </a>
+
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Carrots</h4>
+                            <p class="list-group-item-text">Carrots are widely used in many cuisines, especially in the preparation of salads, and carrot salads are a tradition in many regional cuisines.</p>
+                        </a>
+
+                        <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">Steel-cut oats</h4>
+                            <p class="list-group-item-text">Steel-cut oats take longer to cook than instant, ground, or rolled oats, typically 15–30 minutes (less, if pre-soaked). </p>
+                        </a>
+
+                    </div> <!--end list-group-->
+
+                    <h5>A small heading</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div><!--end col-sm-6 -->
+            </div><!--end moreInfo-->
+
+            <hr>
+            <!--coding the thumbnail-->
+            <div class="row" id="moreCourses">
+                <div class="col-12">
+                    <h3>Learn more about Web Design</h3>
+                    <div class="thumbnails row">
+                        <div class="col-6">
+                            <div class="thumbnail">
+                                <img src="images/item_psd2html5.jpg" alt="PSD to HTML5 & CSS3">
+                                
+                                <!--adding glyphicon for pricetag-->
+                                <!--sup is superscript tag it will make the text small and bring it up -->
+                                <div class="label label-success price"><span class="glyphicon glyphicon-tag"></span> <sup>$</sup>39</div>
+
+
+                                <!--addin the caption-->
+                                <div class="caption">
+                                    <h3>PSD to HTML5 &amp; CSS3</h3>
+                                    <p>Learn how to take a PSD and turn it into a beautiful, hand-coded HTML5 &amp; CSS3 website with this web design crash course. </p>
+
+                                    <!--adding the buttons-->
+                                    <!--target="_blank" means open in a new window-->
+                                    <btn-link is a button link>
+                                    <p><a href="http://getbootstrap.com/" class="btn btn-primary btn-small" target="_blank">Take course</a> <a href="http://getbootstrap.com/" target="_blank" class="btn btn-small btn-link">Learn more</a></p>
+                                </div><!--end caption-->
+                            </div><!--end thumbnail-->
+                        </div><!--end col-6-->
+
+                        <div class="col-6">
+                            <div class="thumbnail">
+                                <img src="images/item_webhosting101.jpg" alt="Web Hosting 101">
+                                 <!--adding glyphicon for pricetag-->
+                                <!--sup is superscript tag it will make the text small and bring it up -->
+                                <div class="label label-info price"><span class="glyphicon glyphicon-tag"></span>Free</div>
+                                <!--addin the caption-->
+                                <div class="caption">
+                                    <h3>Web Hosting 101</h3>
+                                    <p>The first thing you need to learn when making a web site is basic HTML, and that's what this lesson will teach you.</p>
+                                    <!--adding the buttons-->
+                                    <!--target="_blank" means open in a new window-->
+                                    <btn-link is a button link>
+                                    <p><a href="http://getbootstrap.com/" class="btn btn-primary btn-small" target="_blank">Take course</a> <a href="http://getbootstrap.com/" target="_blank" class="btn btn-small btn-link">Learn more</a></p>
+                                </div><!--end caption-->
+                            </div><!--end thumbnail-->
+                        </div><!--end col-6-->
+
+                    </div><!--end thumbnails row-->
+                </div><!--end col-12-->
+            </div><!--end moreCourses-->
+
+
+		</div><!--end container-->
+
+    <!--coding the footer-->
+		<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                <h6>Copyright &copy; 2013 {Fariz}</h6>
+                </div><!--end col-sm-2-->
+
+                <div class="col-sm-4">
+                    <h6>About Us</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div><!--end col-sm-4-->
+
+                <div class="col-sm-2">
+                    <h6>Navigation</h6>
+                    <ul class="unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div><!--end col-sm-2-->
+
+                <div class="col-sm-2">
+                    <h6>Follos Us</h6>
+                    <!--remove the bullet points in ul with css-->
+                    <ul class="unstyled">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Google Plus</a></li>
+                    </ul>
+                </div><!--end col-sm-2-->
+
+                <div class="col-sm-2">
+                    <h6>Code with <span class="glyphicon glyphicon-heart"></span> by Fariz</h6>
+                </div><!--end col-sm-2-->
+
+            </div><!--end row-->
+        </div><!--end container-->
+		</footer>
+	
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+	
+	</body>
+</html>
+
